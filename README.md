@@ -1,14 +1,37 @@
-# Usage of the web demo
+#Usage of the web demo
 
 ## Requirements
 
 The demo server requires Python with some dependencies.
 To make sure you have the dependencies, please run `pip install -r requirements.txt`, and also make sure that you have compiled the Python Caffe interface and that it is on your `PYTHONPATH`
 
-
 ## Prepare your caffe model.
 
 Please refer to [Caffe](http://caffe.berkeleyvision.org/) for how to train a model based on your own dataset. After the train, you should get the net file .prototxt, the weight file .caffemodel.
+
+## Example of how to train the dog breed model based on stanford dog dataset
+
+Plese make sure your caffe framewok was installed, and the path of caffe/.build_release/tools has add to the system PATH.
+
+### Down load the stanford dog dataset
+    
+Download the [images](http://vision.stanford.edu/aditya86/ImageNetDogs/images.tar), [annotations](http://vision.stanford.edu/aditya86/ImageNetDogs/annotation.tar) and [lists](//vision.stanford.edu/aditya86/ImageNetDogs/lists.tar) from [stanford dogs dataset](http://vision.stanford.edu/aditya86/ImageNetDogs/) and extract them to data/standord_dogs
+
+### Paser the dataset
+
+	cd data/standord-dogs && python dog_parse.py
+
+### Creat the lmdb data for train
+
+	cd data/standord-dogs && ./create_image.sh
+
+### Train the model based on GoogleNet.
+
+Download [GoogleNet Model](http://dl.caffe.berkeleyvision.org/bvlc_googlenet.caffemodel) to models/bvlc_googlenet/
+
+Run the following command to start the train. 
+
+	cd models/bvlc_googlenet/ && train.sh
 
 ## How to config the web service. 
 
@@ -19,6 +42,10 @@ Please refer to [Caffe](http://caffe.berkeleyvision.org/) for how to train a mod
    a). In line 10, define the path that you store this project. 
    b). define your caffe model path from line 101 t0 108.
 
+
+http://vision.stanford.edu/aditya86/ImageNetDogs/images.tar
+http://vision.stanford.edu/aditya86/ImageNetDogs/annotation.tar
+http://vision.stanford.edu/aditya86/ImageNetDogs/lists.tar
 
 ## Run
 
