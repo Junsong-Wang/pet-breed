@@ -11,21 +11,21 @@ Please refer to [Caffe](http://caffe.berkeleyvision.org/) for how to train a mod
 
 ## Example of how to train the dog breed model based on stanford dog dataset
 
-Plese make sure your caffe framewok was installed, and the path of caffe/.build_release/tools has add to the system PATH.
+Plese make sure your caffe framewok was installed, and the path of caffe/.build_release/tools has been added to the system PATH.
 
-### Down load the stanford dog dataset
+#### 1. Download the stanford dog dataset
     
 Download the [images](http://vision.stanford.edu/aditya86/ImageNetDogs/images.tar), [annotations](http://vision.stanford.edu/aditya86/ImageNetDogs/annotation.tar) and [lists](//vision.stanford.edu/aditya86/ImageNetDogs/lists.tar) from [stanford dogs dataset](http://vision.stanford.edu/aditya86/ImageNetDogs/) and extract them to data/standord_dogs
 
-### Paser the dataset
+#### 2. Paser the dataset
 
 	cd data/standord-dogs && python dog_parse.py
 
-### Creat the lmdb data for train
+#### 3. Creat the lmdb data for train
 
 	cd data/standord-dogs && ./create_image.sh
 
-### Train the model based on GoogleNet.
+#### 4. Train the model based on GoogleNet.
 
 Download [GoogleNet Model](http://dl.caffe.berkeleyvision.org/bvlc_googlenet.caffemodel) to models/bvlc_googlenet/
 
