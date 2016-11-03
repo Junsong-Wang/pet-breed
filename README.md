@@ -59,4 +59,5 @@ You can enable debug mode of the web server, or switch to a different port:
       -h, --help            show this help message and exit
       -d, --debug           enable debug mode
       -p PORT, --port=PORT  which port to serve content on
+      -g, --gpu             enable GPU accelerator
 
