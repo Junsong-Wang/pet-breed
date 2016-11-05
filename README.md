@@ -2,8 +2,9 @@
 
 ## Requirements
 
-The demo server requires Python with some dependencies.
-To make sure you have the dependencies, please run `pip install -r requirements.txt`, and also make sure that you have compiled the Python Caffe interface and that it is on your `PYTHONPATH`
+Install the [caffe](http://caffe.berkeleyvision.org/) framework following the instructions [here](http://caffe.berkeleyvision.org/installation.html), and also the Python caffe by runing the `Make pycaffe` and `pip install -r requirements.txt` in caffe/python. Make sure that you have compiled the Python Caffe interface and that it is on your `PYTHONPATH`
+
+The demo server requires Python with some additional dependencies. To make sure you have the dependencies, please run `pip install -r requirements.txt`
 
 ## Prepare your caffe model.
 
