@@ -18,7 +18,7 @@ Plese make sure your caffe framewok was installed, and the path of caffe/.build_
     
 Download the [images](http://vision.stanford.edu/aditya86/ImageNetDogs/images.tar), [annotations](http://vision.stanford.edu/aditya86/ImageNetDogs/annotation.tar) and [lists](//vision.stanford.edu/aditya86/ImageNetDogs/lists.tar) from [stanford dogs dataset](http://vision.stanford.edu/aditya86/ImageNetDogs/) and extract them to data/standord_dogs
 
-#### 2. Paser the dataset
+#### 2. Parse the dataset to generate the train and test dataset
 
 	cd data/standord-dogs && python dog_parse.py
 
@@ -41,12 +41,9 @@ Run the following command to start the train.
 2. Modify the web_demo/app.py file. 
 
    a). In line 10, define the path that you store this project. 
+
    b). define your caffe model path from line 101 t0 108.
 
-
-http://vision.stanford.edu/aditya86/ImageNetDogs/images.tar
-http://vision.stanford.edu/aditya86/ImageNetDogs/annotation.tar
-http://vision.stanford.edu/aditya86/ImageNetDogs/lists.tar
 
 ## Run
 
